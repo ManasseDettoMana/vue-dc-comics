@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <Header />
+    <Jumbo />
+    <PageNav />
   </div>
 </template>
 
@@ -9,18 +11,24 @@
 <script>
 
 import Header from './components/Header.vue'
+import Jumbo from './components/Jumbo.vue'
+import PageNav from './components/PageNav.vue'
+
 
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Jumbo,
+    PageNav
   }
 }
 </script>
 
 <style lang="scss">
-@import "./style/variables.scss";
+@import './style/variables.scss';
+
 
 
 #app {
