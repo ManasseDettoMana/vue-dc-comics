@@ -3,6 +3,7 @@
     <Header />
     <Jumbo />
     <PageNav />
+    <Footer />
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import Header from './components/Header.vue'
 import Jumbo from './components/Jumbo.vue'
 import PageNav from './components/PageNav.vue'
+import Footer from './components/Footer.vue'
 
 
 
@@ -21,7 +23,8 @@ export default {
   components: {
     Header,
     Jumbo,
-    PageNav
+    PageNav,
+    Footer
   }
 }
 </script>
