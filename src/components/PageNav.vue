@@ -2,7 +2,14 @@
     <div class="row" id="root">
         <div class="container">
             <nav>
-                <li v-for=""><a href="#"><div id="info_image_container"></div><span></span></a></li>
+                <li v-for="(link, index) in infoLink" :key="index">
+                    <a href="#">
+                        <div>
+                            <img :src="link.url" alt="">
+                        </div>
+                        <span>{{link.text}}</span>
+                    </a>
+                </li>
             </nav>
         </div>
     </div>
@@ -11,23 +18,30 @@
 <script>
 export default {
     name: 'PageNav',
+    components: {
+        
+    },
     data: function(){
         return{
             infoLink: [
                 {
-                    url: '../assets/img/buy-comics-merchandise.png',
+                    url: '/assets/img/buy-comics-digital-comics.png',
+                    text: 'digital comics'
+                },
+                {
+                    url: '/assets/img/buy-comics-merchandise.png',
                     text: 'dc merchandise'
                 },
                 {
-                    url: '../assets/img/buy-comics-subscriptions.png',
+                    url: '/assets/img/buy-comics-subscriptions.png',
                     text: 'subscription'
                 },
                 {
-                    url: '../assets/img/buy-comics-shop-locator.png',
+                    url: '/assets/img/buy-comics-shop-locator.png',
                     text: 'comic shop locator'
                 },
                 {
-                    url: '../assets/img/buy-dc-power-visa.svg',
+                    url: '/assets/img/buy-dc-power-visa.svg',
                     text: 'dc power visa'
                 },       
             ]
@@ -55,7 +69,7 @@ export default {
     nav{
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         li{
             list-style-type: none;
@@ -64,24 +78,25 @@ export default {
                 justify-content: center;
                 align-items: center;
                 color: white;
+                font-size: 0.9rem;
                 &:hover{
                     text-decoration: underline;
                 }
                 span{
                     text-transform: uppercase;
-                    margin-left: 20px;
+                    margin-left: 15px;
 
                 }
                 img{
                     width: 50px;
                 }
-                #info_image_container{
+                div{
                     width: 60px;
                     height: 60px;
-                    background-image: url('../assets/img/buy-comics-digital-comics.png');
-                    background-position: center;
-                    background-size: contain;
-                    background-repeat: no-repeat;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
