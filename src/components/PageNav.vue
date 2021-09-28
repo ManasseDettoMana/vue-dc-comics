@@ -1,10 +1,8 @@
 <template>
-    <div class="row">
+    <div class="row" id="root">
         <div class="container">
             <nav>
-                <li><a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>digital comics</span></a></li>
-                <li><a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>dc merchandise</span></a></li>
-                <li><a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt=""><span>subscription</span></a></li>
+                <li v-for=""><a href="#"><div id="info_image_container"></div><span></span></a></li>
             </nav>
         </div>
     </div>
@@ -12,8 +10,35 @@
 
 <script>
 export default {
-
+    name: 'PageNav',
+    data: function(){
+        return{
+            infoLink: [
+                {
+                    url: '../assets/img/buy-comics-merchandise.png',
+                    text: 'dc merchandise'
+                },
+                {
+                    url: '../assets/img/buy-comics-subscriptions.png',
+                    text: 'subscription'
+                },
+                {
+                    url: '../assets/img/buy-comics-shop-locator.png',
+                    text: 'comic shop locator'
+                },
+                {
+                    url: '../assets/img/buy-dc-power-visa.svg',
+                    text: 'dc power visa'
+                },       
+            ]
+        }
+    }   
 }
+ 
+
+
+
+
 </script>
 
 <style scoped lang="scss">
@@ -35,6 +60,9 @@ export default {
         li{
             list-style-type: none;
             a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: white;
                 &:hover{
                     text-decoration: underline;
@@ -42,14 +70,23 @@ export default {
                 span{
                     text-transform: uppercase;
                     margin-left: 20px;
+
+                }
+                img{
+                    width: 50px;
+                }
+                #info_image_container{
+                    width: 60px;
+                    height: 60px;
+                    background-image: url('../assets/img/buy-comics-digital-comics.png');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
                 }
             }
         }
     }
 }
 
-img{
-    width: 50px;
-}
 
 </style>
