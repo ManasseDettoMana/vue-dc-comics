@@ -103,7 +103,7 @@ export default {
     background-repeat: no-repeat;
     background-position:center ;
     background-size: cover;
-    height: 500px;
+    height: 400px;
 }
 .row{
     .container{
