@@ -29,7 +29,7 @@ export default {
         return{
             navLInk: [
                 {
-                    name: 'charachters',
+                    name: 'characters',
                     link: '#',
                     active: false
                 },
@@ -107,11 +107,18 @@ export default {
                         color: $bluCeleste;
                         border-bottom: 3px solid $bluCeleste;
                     }
+                    &:hover{
+                        border-bottom: 3px solid $bluCeleste;
+                    }
                     a{
                         color: black;
                         text-transform: uppercase;
                         font-weight: 700;
                         font-size: 13px;
+                        &:hover{
+                            text-decoration: none;
+                        }
+
 
                     }
                 }
