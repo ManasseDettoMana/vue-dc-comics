@@ -2,7 +2,10 @@
     <div class="row">
         <div class="container">
             <div class="col-6 colonna" id="left_column">
-                <div class="col-3 colonna"></div>
+                <div class="col-4 " v-for="(link, index) in links" :key='index'>
+                    <h2>{{link.name}}</h2>
+                    <li v-for="(element, indice) in links[index].linkList" :key="indice" ><a href="#" >{{element}}</a></li>
+                </div>
             </div>
             <div class="col-6 colonna" id="dc_bg"></div>
         </div>
@@ -17,29 +20,31 @@ export default {
     },
     data: function(){
         return{
+
             links: [
                 {
                     name: 'dc comics',
-                    link: [
-                        'Characters',
+                    linkList: [
+                        "Characters", 
                         'Comics',
                         'Movies',
                         'TV',
                         'Games',
                         'Videos',
                         'News'
+                        
                     ]
                 },
                 {
                     name: 'shop',
-                    link: [
+                    linkList: [
                         'Shop DC',
                         'Shop DC Collectibles'
                     ]
                 },
                 {
                     name: 'dc',
-                    link: [
+                    linkList: [
                         'Terms Of Use',
                         'Privacy policy (New)',
                         'Ad Choices',
@@ -54,19 +59,20 @@ export default {
                     ]
                 },
                 {
-                    nmae: 'sites',
-                    link: [
+                    name: 'sites',
+                    linkList: [
                         'DC',
                         'MAD Magazine',
                         'DC Kids',
                         'DC Universe',
-                        ' DC Power Visa'
+                        '   DC Power Visa'
                     ]                    
                 }
             ]
         }
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -80,6 +86,19 @@ export default {
 
     .container{
         display: flex;
+        li{
+            list-style-type: none;
+        }
+        a{
+            color: grey;
+            font-size: 13px
+        }
+        h2{
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+        }
         #left_column{
             display: flex;
 
