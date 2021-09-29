@@ -25,23 +25,23 @@ export default {
         return{
             infoLink: [
                 {
-                    url: '/assets/img/buy-comics-digital-comics.png',
+                    url: '../assets/img/buy-comics-digital-comics.png',
                     text: 'digital comics'
                 },
                 {
-                    url: '/assets/img/buy-comics-merchandise.png',
+                    url: '../assets/img/buy-comics-merchandise.png',
                     text: 'dc merchandise'
                 },
                 {
-                    url: '/assets/img/buy-comics-subscriptions.png',
+                    url: '../assets/img/buy-comics-subscriptions.png',
                     text: 'subscription'
                 },
                 {
-                    url: '/assets/img/buy-comics-shop-locator.png',
+                    url: '../assets/img/buy-comics-shop-locator.png',
                     text: 'comic shop locator'
                 },
                 {
-                    url: '/assets/img/buy-dc-power-visa.svg',
+                    url: '../assets/img/buy-dc-power-visa.svg',
                     text: 'dc power visa'
                 },       
             ]

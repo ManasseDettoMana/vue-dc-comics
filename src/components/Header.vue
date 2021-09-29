@@ -35,17 +35,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row{
-    margin-top: 50px;    
-    padding: 20px;
+    .row{
+        margin-top: 50px;    
+        padding: 20px;
 
-    img{
-        width: 75px;
-    }
+        img{
+            width: 75px;
+        }
 
-    ul{
-        height: 100%;
-        margin: 0;
+        ul{
+            height: 100%;
+            margin: 0;
+        }
     }
-}
 </style>
